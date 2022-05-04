@@ -2,12 +2,13 @@
 #
 # Thank you so much for your contribution! Below you can find the
 # pattern, some explanation and an example for a proper commit message.
-# Please also consider to edit your contribution in the 'KUDOS.txt' in
-# the repository, update the CHANGELOG.md and to sign your commit.
+# Please also consider to update the CHANGELOG.md and to sign your commit.
+#
+# reference: https://www.conventionalcommits.org/
 #
 #<--- pattern --------------------------------------------------------->
 #
-# (Feature|Fix|Refactor|Document): <SUBJECT>
+# (feat|fix|refact|docs): <SUBJECT>
 #
 # The body, explains the change a little bit more. You can:
 #
@@ -18,6 +19,8 @@
 #
 # - resolves: #0815
 # - addresses: #4711
+#
+# BREAKING CHANGE: <SOME DESCRIPTION>
 #
 #<--- usage ----------------------------------------------------------->
 #

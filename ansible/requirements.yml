@@ -1,0 +1,11 @@
+---
+# ansible/requirements.yml
+
+roles: []
+
+collections:
+
+  - name: "https://github.com/whiletruedoio/whiletruedoio.general"
+    type: "git"
+    version: "main"
+...
