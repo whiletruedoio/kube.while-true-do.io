@@ -3,54 +3,33 @@ reference: https://www.makeareadme.com/
 reference: https://commonmark.org/
 -->
 
-<!--
-TODO: Intro
+[![Cirrus CI - Base Branch Build Status](https://img.shields.io/cirrus/github/whiletruedoio/kube.while-true-do.io?logo=Cirrus-ci)](https://cirrus-ci.com/github/whiletruedoio/kube.while-true-do.io)
+[![CodeFactor](https://www.codefactor.io/repository/github/whiletruedoio/kube.while-true-do.io/badge)](https://www.codefactor.io/repository/github/whiletruedoio/kube.while-true-do.io)
+[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/whiletruedoio/kube.while-true-do.io?logo=GitHub&label=Release&sort=semver)](https://github.com/whiletruedoio/kube.while-true-do.io/releases)
+[![GitHub issues](https://img.shields.io/github/issues/whiletruedoio/kube.while-true-do.io)](https://github.com/whiletruedoio/kube.while-true-do.io/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/whiletruedoio/kube.while-true-do.io)](https://github.com/whiletruedoio/kube.while-true-do.io/pulls)
+[![GitHub license](https://img.shields.io/github/license/whiletruedoio/kube.while-true-do.io)](https://github.com/whiletruedoio/kube.while-true-do.io/blob/main/LICENSE)
 
-Thank you a lot for starting a new repository.
+# kube.while-true-do.io
 
-We want to be very transparent and provide proper documentation to users of
-products, software and services. To ensure this, we have set up this repository.
+Kubernetes nodes for deployments of
+[while-true-do.io](https://while-true-do.io).
 
-Before going any further, please ensure that you have read the Contribution
-Guidelines and you are willing to accept these.
+## Disclaimer
 
-Please read each of the below sections and comments carefully and check each
-section. It may happen that a section, file or content does not apply to you:
-Please feel free to remove sections or mention, that there is nothing needed
-or keep the TODO there until it is done.
-
-Please also search for the terms REPO_NAME and REPO_DESCRIPTION and replace them
-with some useful text.
-
-Before releasing something, we also recommend to get in touch with the project
-owners for a review of your code and documentation.
--->
-
-# REPO_NAME
-
-REPO_DESCRIPTION
+This repository is under heavy development and not released, yet. All code is
+subject to change and considered "broken" until it is released.
 
 ## Motivation
 
-<!-- TODO: Motivation
-
-This section describes the motivation to create the software.
-
-Why is this repository needed?
-Which problem is solved?
-Who may need it?
--->
+Running Kubernetes can be done in different ways. Since we want to have a
+reproducible setup for home, IoT, clustered and single node deployments, we need
+a fitting Kubernetes configuration.
 
 ## Description
 
-<!-- TODO: Description
-
-This section describes the software/code itself. Please describe the software
-thoroughly, so a user gets a good understanding what to expect, when using it.
-
-Optional: Add subsections for features, screenshots, etc. and/or add files
-in docs/* (documents) or assets/* (pictures, images, diagrams).
--->
+kube.while-true-do.io represents the compute nodes, which can be reproduced at
+home and in the cloud.
 
 ## Usage
 
@@ -59,43 +38,42 @@ install and run the code on your machine, please check out this section.
 
 ### Requirements
 
-<!-- TODO: Requirements
+You will need the possibility to deploy at least a single virtual machine or
+bare metal machine, which represents the below requirements.
 
-This section describes what one needs to run the code in production.
+Minimum:
 
-What is needed beforehand?
-What are prerequisites to start with an installation?
-Are there any dependencies, that needs to be solved?
+- CPU: 2 cores
+- RAM: 2 GB
+- Disk: 100 GB
 
-Optional: Use and link a docs/REQUIREMENTS.md
--->
+Recommended:
+
+- CPU: 4 cores
+- RAM: 4 GB
+- Disk: 200 GB
 
 ### Install
 
-<!-- TODO: Install
+#### Boot ISO
 
-This section describes how to install the product to actually use it.
+TODO: Describe the installation with the ISO.
 
-How to install the content?
-Are there manual steps?
-Providing a step-by-step guide is recommended.
+#### Cloud Image
 
-Optional: Use and link a docs/INSTALL.md
--->
+TODO: Describe the installation with Cloud Init.
 
-### Documentation
+### Configure
 
-<!-- TODO: Documentation
+TODO: Describe the configuration of a deployed node via Ansible.
 
-This section describes how to use or administrate the software.
+### Update
 
-First steps after the installation?
-Important things the user/admin should know?
-Could you provide examples to use the code?
-Were to find additional documentation?
+TODO: Describe the update process of a deployed node via Ansible.
 
-Optional: Use and link docs/*.md files
--->
+### Deploy
+
+TODO: Describe the deployment of workload on a configured node.
 
 ## Contribute
 
@@ -132,15 +110,10 @@ We are maintaining a [changelog](CHANGELOG.md) for repositories. Normally, the
 developers will update the changelog, according to
 [keepachangelog.com](https://keepachangelog.com/).
 
-<!-- TODO: Changelog
-
-Please update and maintain the CHANGELOG.md
--->
-
 ### Test
 
 To ensure a high quality and functionality, we want to carefully test our
-software. 
+software.
 
 <!-- TODO: Test
 

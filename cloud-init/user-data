@@ -1,0 +1,43 @@
+---
+#cloud-config
+
+# System language
+locale: "en_US.UTF-8"
+# Keyboard layout
+keyboard:
+  layout: "us"
+# System timezone
+timezone: "UTC"
+
+# Root
+disable_root: true
+
+# Users
+system_info:
+  default_user:
+    name: "node-admin"
+    gecos: "Administrator"
+    lock_passwd: true
+    groups: ["wheel"]
+    shell: "/bin/bash"
+    passwd: "$6$rounds=4096$gh2CVt8V3nATm7ix$9yU3SW8Q7KhR9IHd05zAYmRSTrjiuOxe5p5IA61MGxrlUrN5RmIHm3YJunRAKNfqIK7OcD3elNvUouS0mIdHQ1"
+    ssh-authorized_keys:
+      - "AAAAC3NzaC1lZDI1NTE5AAAAIIm5gwNNvkvQ5289DsbGwsZTKLgzss+hmtzsGwHT5I6F dschier@while-true-do.io"
+
+# Packages
+packages:
+  - "audit"
+  - "cockpit"
+  - "tuned"
+package_upgrade: true
+package_reboot_if_required: true
+
+# Commands
+runcmd:
+  - "systemctl disable cloud-init.service"
+
+# cloud-init Configuration
+no_ssh_fingerprints: false
+ssh:
+  emit_keys_to_console: false
+...

@@ -16,4 +16,6 @@ rules:
   quoted-strings:
     quote-type: "any"
     required: true
+
+ignore: "vault.yml"
 ...

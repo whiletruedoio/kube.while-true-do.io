@@ -1,0 +1,5 @@
+---
+# ansible/inventories/prod/group_vars/nodes/vars.yml
+
+user_users: "{{ vault_user_users }}"
+...

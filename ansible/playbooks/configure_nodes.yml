@@ -1,0 +1,60 @@
+---
+# ansible/playbooks/configure.yml
+
+- name: "Configure nodes Playbook"
+  hosts: "nodes"
+  serial:
+    - "10%"
+    - "25%"
+    - "100%"
+
+  tasks:
+
+    - name: "Import misc Role"
+      ansible.builtin.import_role:
+        name: "whiletruedoio.general.misc"
+      tags:
+        - "misc"
+
+    - name: "Import user Role"
+      ansible.builtin.import_role:
+        name: "whiletruedoio.general.user"
+      tags:
+        - "user"
+
+    - name: "Import selinux Role"
+      ansible.builtin.import_role:
+        name: "whiletruedoio.general.selinux"
+      tags:
+        - "selinux"
+
+    - name: "Import firewalld Role"
+      ansible.builtin.import_role:
+        name: "whiletruedoio.general.firewalld"
+      tags:
+        - "firewall"
+
+    - name: "Import sshd Role"
+      ansible.builtin.import_role:
+        name: "whiletruedoio.general.sshd"
+      tags:
+        - "ssh"
+
+    - name: "Import pcp Role"
+      ansible.builtin.import_role:
+        name: "whiletruedoio.general.pcp"
+      tags:
+        - "pcp"
+
+    - name: "Import cockpit Role"
+      ansible.builtin.import_role:
+        name: "whiletruedoio.general.cockpit"
+      tags:
+        - "cockpit"
+
+    - name: "Import k3s Role"
+      ansible.builtin.import_role:
+        name: "whiletruedoio.general.k3s"
+      tags:
+        - "k3s"
+...

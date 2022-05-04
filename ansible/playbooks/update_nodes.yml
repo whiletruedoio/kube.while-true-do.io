@@ -1,0 +1,18 @@
+---
+# ansible/playbooks/update.yml
+
+- name: "Update nodes Playbook"
+  hosts: "nodes"
+  serial:
+    - "10%"
+    - "25%"
+    - "100%"
+
+  tasks:
+
+    - name: "Import update Role"
+      ansible.builtin.import_role:
+        name: "whiletruedoio.general.update"
+      tags:
+        - "update"
+...
